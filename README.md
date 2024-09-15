@@ -1,6 +1,4 @@
-# spring-security-practice
-
-## 스프링 시큐리티
+# spring security
 
 [스프링 시큐리티 1 : 실습 목표 및 간단한 동작 원리](https://www.youtube.com/watch?v=y0PXQgrkb90&list=PLJkjrxxiBSFCKD9TRKDYn7IE96K2u3C3U)
 
