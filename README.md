@@ -6,9 +6,6 @@
 
 > 시큐리티 동작 원리
 > 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a0ff2a03-773c-4953-af24-b9d7906c8e17/9a888c3d-f151-4aa8-af74-ae9459a911af/image.png)
-
 스프링은 서블릿 컨테이너 위에 존재하고 있음 → 클라이언트 요청하면 서블릿 컨테이너가 요청 받아서 여기 안에 존재하는 필터들 거친 후에, 스프링 부트에 요청이 도달하게 되는데 → 스프링 시큐리티 config 파일을 등록해두면, config 파일이 필터에 특정한 필터를 만들어서 클라이언트 요청을 가로챔 → 클라이언트가 가고싶은 목적지 이전에 해당 클라이언트가 권한이 있는지 분석함 → 만약에 admin controller 가고싶은데, admin 권한이없으면 필터에서 권한을 막게 됨 → 로그인 진행해야 할 경우 필터에서 모든 유저에 대한 접근 허용해서 로그인 컨트롤러가서 로그인 진행하고 → 세션에 로그인 정보가 등록됨. → 이후 다른 페이지 갈때는 세션에 유저가 등록되어있어서 필터에서 통과를 허용시켜서 마이페이지 컨트롤러에 접근할 수 있음
 
 [Spring Security란? 사용하는 이유부터 설정 방법까지 알려드립니다! I 이랜서 블로그](https://www.elancer.co.kr/blog/view?seq=235)
@@ -19,8 +16,6 @@
 [개발자 유미 | 커뮤니티](https://www.devyummi.com/page?id=668bd5de16014d6810ed85f3)
 
 cf. **머스테치(Mustache)** 는 JSP와 같이 HTML을 만들어 주는 템플릿 엔진
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a0ff2a03-773c-4953-af24-b9d7906c8e17/e707e2e4-6eb7-48c4-b424-e025bbe54a3d/image.png)
 
 [[Spring Boot] Chap 4.Mustache로 화면 구성하기](https://doorisopen.github.io/spring/2020/03/03/spring-freelec-springboot-chap4.html)
 
@@ -190,8 +185,6 @@ public BCryptPasswordEncoder bCryptPasswordEncoder() {
 
 [개발자 유미 | 커뮤니티](https://www.devyummi.com/page?id=668bda7916014d6810ed85fd)
 
-![스크린샷 2024-09-02 오후 11.16.18.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a0ff2a03-773c-4953-af24-b9d7906c8e17/f0aeb53d-9cc2-41c4-a044-cf8bc2f71226/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-09-02_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.16.18.png)
-
 > 회원가입 로직
 > 
 
@@ -199,9 +192,7 @@ public BCryptPasswordEncoder bCryptPasswordEncoder() {
 
 - 회원정보를 통해 인증, 인가를 진행하기 때문에 로그인이 진행되어야 한다.
 - 기존에 스프링 어플리케이션에 저장된 회원 정보를 가지고 진행하게 되는데, 스프링 어플리케이션에 기본적으로 사용자의 회원 정보를 가지고 있어야 한다.
-
-![스크린샷 2024-09-08 오후 6.53.47.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a0ff2a03-773c-4953-af24-b9d7906c8e17/56424ac8-b11b-445b-a278-cfbee4f48ed0/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-09-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.53.47.png)
-
+  
 1. 우선 페이지 먼저 생성
 
 ```java
@@ -512,8 +503,6 @@ public class JoinService {
 > 
 
 [개발자 유미 | 커뮤니티](https://www.devyummi.com/page?id=668be4696a08359d16576c45)
-
-![스크린샷 2024-09-08 오후 10.29.46.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/a0ff2a03-773c-4953-af24-b9d7906c8e17/d3780bad-065f-4733-84a7-c912ffb7f1d1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2024-09-08_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_10.29.46.png)
 
 → 데이터베이스로부터 저장된 회원정보를 가지고 들어오는 데이터로 아이디 검증을 진행하려면 UserDetailService, UserDetails를 통해 구현 해야한다. 
 
